@@ -1,0 +1,21 @@
+<%= form_for(@recipe) do |f|%>
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+	<br>
+	<%= f.label "Ingredient List" %>
+	<br>
+	<%= f.collection_check_boxes :ingredient_ids, @ingredients, :id, :name %>
+	<!-- syntax for collection_check_boxes -->
+	<!-- OUR RECIPE'S CURRENT INGREDIENTS (ingredient_ids), ALL INGREDIENTS(@ingredients), VALUE OF CHECKBOX(:id), KEY IN PARAMS HASH(:name)-->
+
+	<% @ingredients.each do |ingredient| %>
+
+		<input type="checkbox" <%= "checked" if @recipe.ingredient_ids.include?(ingredient.id) %>
+
+	<% end %>
+
+	<br>
+	<%= f.label :pic %>
+	<%= f.text_field :pic %>
+	<%= f.submit %>
+<% end %>

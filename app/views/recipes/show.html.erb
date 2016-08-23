@@ -1,0 +1,16 @@
+<h1><%= @recipe.name %></h1>
+
+<%= image_tag @recipe.pic, width: 250 %>
+<br>
+<%= link_to "Edit this #{@recipe.name}!", edit_recipe_path(@recipe) %>
+
+<h2>Ingredients</h2>
+
+<ul>
+
+<% @recipe.ingredients.each do |ingredient| %>
+	<li><%= ingredient.name %></li>
+<% end %>
+
+</ul>
+

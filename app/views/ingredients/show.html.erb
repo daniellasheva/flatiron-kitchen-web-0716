@@ -1,0 +1,5 @@
+<h1><%= @ingredient.name %></h1>
+
+<h3><%= link_to "Edit this #{@ingredient.name}?", edit_ingredient_path(@ingredient) %></h3>
+
+<%= image_tag(@ingredient.pic, width: 100) %>
