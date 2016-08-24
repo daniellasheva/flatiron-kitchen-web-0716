@@ -8,11 +8,11 @@
 	<!-- syntax for collection_check_boxes -->
 	<!-- OUR RECIPE'S CURRENT INGREDIENTS (ingredient_ids), ALL INGREDIENTS(@ingredients), VALUE OF CHECKBOX(:id), KEY IN PARAMS HASH(:name)-->
 
-	<% @ingredients.each do |ingredient| %>
+	<!-- <% @ingredients.each do |ingredient| %>
 
 		<input type="checkbox" <%= "checked" if @recipe.ingredient_ids.include?(ingredient.id) %>
 
-	<% end %>
+	<% end %> -->
 
 	<br>
 	<%= f.label :pic %>
